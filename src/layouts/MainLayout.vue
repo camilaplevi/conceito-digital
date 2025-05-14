@@ -1,37 +1,24 @@
-<script lang="ts">
-import { defineComponent, ref } from 'vue';
+<script setup lang="ts">
+import { ref } from 'vue';
 import { imagesConceito } from 'src/assets/images/Images'
 import { useRoute } from 'vue-router';
 
 
-export default defineComponent({
-  setup() {
-    const route = useRoute();
+const route = useRoute();
 
-    const rightDrawerOpen = ref(false);
+const rightDrawerOpen = ref(false);
 
-    const toggleRightDrawer = () => {
-      rightDrawerOpen.value = !rightDrawerOpen.value;
-    };
+const toggleRightDrawer = () => {
+  rightDrawerOpen.value = !rightDrawerOpen.value;
+};
 
-    const menuItems = [
-      { id: 1, path: 'inicio', label: 'Início' },
-      { id: 2, path: 'sobre', label: 'Sobre' },
-      { id: 3, path: 'portfolio', label: 'Portfólio' },
-      { id: 4, path: 'contato', label: 'Contato' }
-    ]
+const menuItems = [
+  { id: 1, path: 'inicio', label: 'Início' },
+  { id: 2, path: 'sobre', label: 'Sobre' },
+  { id: 3, path: 'portfolio', label: 'Portfólio' },
+  { id: 4, path: 'contato', label: 'Contato' }
+]
 
-    return {
-      menuItems,
-      route,
-      rightDrawerOpen,
-      toggleRightDrawer,
-
-      imagesConceito
-    }
-  }
-
-})
 </script>
 
 <template>
