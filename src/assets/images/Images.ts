@@ -23,6 +23,14 @@ import ImageTabuleiro from 'src/assets/images/tabuleiro.png';
 import ImageLampadas from 'src/assets/images/lampadas.png';
 import ImageConteudo from 'src/assets/images/image-conteudo.png';
 import BgDiscoverImage from 'src/assets/images/bg-discover-image.png';
+import ConceitoImage from 'src/assets/images/about/conteitoImage.png';
+import EquipeUm from 'src/assets/images/about/equipe-01.svg';
+import EquipeDois from 'src/assets/images/about/equipe-02.svg';
+import EquipeTres from 'src/assets/images/about/equipe-03.svg';
+import EquipeQuatro from 'src/assets/images/about/equipe-04.svg';
+import EquipeCinco from 'src/assets/images/about/equipe-05.svg';
+import EquipeSeis from 'src/assets/images/about/equipe-06.svg';
+import LogoFooter from 'src/assets/images/conceito-logo-footer.png';
 
 export const imagesConceito = {
   logoConceito: LogoConteito,
@@ -53,4 +61,14 @@ export const imagesConceito = {
 
   imageConteudo: ImageConteudo,
   bgDiscover: BgDiscoverImage,
+
+  conceitoImage: ConceitoImage,
+  equipeUm: EquipeUm,
+  equipeDois: EquipeDois,
+  equipeTres: EquipeTres,
+  equipeQuatro: EquipeQuatro,
+  equipeCinco: EquipeCinco,
+  equipeSeis: EquipeSeis,
+
+  logoFooter: LogoFooter,
 };

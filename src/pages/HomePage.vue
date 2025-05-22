@@ -130,54 +130,102 @@ const toggleTopic = (topic: Topic) => {
 
       <div style="position: relative;">
         <div class="main-title" style="position: relative; z-index: 1; text-align: center; line-height: 0.8;">
-          <p style="font-family: BebasNeue; font-size: 300px;
-                   background: linear-gradient(90deg, #00C2FF80 0%, #AF00FF80 100%);
-                   -webkit-background-clip: text; 
-                   background-clip: text;
-                   color: transparent;
-                   margin: 0;
-                   padding: 0;
-                   display: inline-block;">
+          <p class="gt-sm" style="font-family: BebasNeue; font-size: 300px;
+             background: linear-gradient(90deg, #00C2FF80 0%, #AF00FF80 100%);
+             -webkit-background-clip: text; 
+             background-clip: text;
+             color: transparent;
+             margin: 0;
+             padding: 0;
+             display: inline-block;">
+            {{ marketingTitle }}
+          </p>
+          <p class="lt-md" style="font-family: BebasNeue; font-size: 150px;
+             background: linear-gradient(90deg, #00C2FF80 0%, #AF00FF80 100%);
+             -webkit-background-clip: text; 
+             background-clip: text;
+             color: transparent;
+             margin: 0;
+             padding: 0;
+             display: inline-block;">
             {{ marketingTitle }}
           </p>
         </div>
 
-        <div class="main-image-container"
-          style="position: absolute; top: 0; left: 0; width: 100%; z-index: 2; text-align: center; margin-top: -230px;">
-          <img :src="imagesConceito.mainImage" alt="" class="main-image"
-            style="max-height: 854px; object-fit: contain; transform: translateY(30%);">
+        <div class="marketing-area lt-md"
+          style="display: flex; flex-direction: column; width: 100%; margin: 40px auto 0; position: relative; z-index: 3;">
+          <div class="marketing-left"
+            style="width: 100%; display: flex; flex-direction: column; align-items: center; margin-bottom: 30px;">
+            <p class="marketing-text"
+              style="font-family: DidactGothic; font-size: 18px; margin: 0; width: 100%; text-align: center;">
+              {{ marketingText }}
+            </p>
+            <q-btn class="marketing-btn" label="Abra uma oportunidade"
+              style="width: 252px; height: 46px; font-size: 18px; margin-top: 30px;"></q-btn>
+          </div>
+          <div class="marketing-right" style="width: 100%; display: flex; justify-content: center;">
+            <p class="marketing-quote"
+              style="font-family: DidactGothic; font-size: 18px; text-align: center; width: 100%; max-width: 300px;">
+              {{ secondMktText }}
+            </p>
+          </div>
+        </div>
+
+        <div class="main-image-container lt-md"
+          style="position: relative; width: 100%; z-index: 2; text-align: center; margin: 40px 0;">
+          <img :src="imagesConceito.mainImage" alt="" style="max-height: 500px; width: 100%; object-fit: contain;">
+        </div>
+
+        <div class="text-image-container lt-md" style="border-radius: 15px; width: 100%; height: auto; padding: 20px; margin: 40px auto; 
+              display: flex; justify-content: center; 
+              background: linear-gradient(90deg, #AE00FF47 0%, #65009347 21.15%, #B617FF47 58.17%, #69009947 89.42%)">
+          <p class="text-image"
+            style="color: var(--q-secondary); font-family: Inter; font-size: 18px; font-weight: 600; text-align: center;">
+            {{ textImage }}
+          </p>
+        </div>
+
+        <div class="gt-sm">
+          <div class="main-image-container"
+            style="position: absolute; top: 0; left: 0; width: 100%; z-index: 2; text-align: center; margin-top: -230px;">
+            <img :src="imagesConceito.mainImage" alt=""
+              style="max-height: 854px; object-fit: contain; transform: translateY(30%);">
+          </div>
+        </div>
+
+        <div class="marketing-area gt-sm"
+          style="display: flex; justify-content: space-between; width: 100%; max-width: 1050px; margin: 17px auto 0; position: relative; z-index: 3;">
+          <div class="column marketing-left"
+            style="width: 45%; display: flex; flex-direction: column; align-items: flex-start;">
+            <p class="marketing-text" style="font-family: DidactGothic; font-size: 20px; margin: 0; width: 351px;">
+              {{ marketingText }}
+            </p>
+            <q-btn class="marketing-btn" label="Abra uma oportunidade"
+              style="width: 252px; height: 46px; font-size: 20px; text-transform: none; border-radius: 200px; margin-top: 63px; border: 0.5px solid #B20CFF; background: rgba(178, 12, 255, 0.10);"></q-btn>
+          </div>
+          <div class="marketing-right" style="width: 45%; display: flex; justify-content: flex-end;">
+            <p class="marketing-quote"
+              style="font-family: DidactGothic; font-size: 20px; font-weight: 400; line-height: normal; margin: 0; width: 236px;">
+              {{ secondMktText }}
+            </p>
+          </div>
+        </div>
+
+        <div class="text-image-container gt-sm"
+          style="border-radius: 15px; width: 1045px; height: 62px; z-index: 2; margin: 236px auto 0px; position: relative; align-items: flex-end; display: flex; justify-content: center; background: linear-gradient(90deg, #AE00FF47 0%, #65009347 21.15%, #B617FF47 58.17%, #69009947 89.42%)">
+          <p class="text-image"
+            style="color: var(--q-secondary); text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); font-family: Inter; font-size: 25px; font-weight: 600; line-height: normal;">
+            {{ textImage }}
+          </p>
         </div>
       </div>
 
-      <div class="marketing-area"
-        style="display: flex; justify-content: space-between; width: 100%; max-width: 1050px; margin: 17px auto 0; position: relative; z-index: 3;">
-        <div class="column marketing-left"
-          style="width: 45%; display: flex; flex-direction: column; align-items: flex-start;">
-          <p class="marketing-text" style="font-family: DidactGothic; font-size: 20px; margin: 0; width: 351px;">{{
-            marketingText }}
-          </p>
-          <q-btn class="marketing-btn" label="Abra uma oportunidade"
-            style="width: 252px; height: 46px; font-size: 20px; text-transform: none; border-radius: 200px; margin-top: 63px; border: 0.5px solid #B20CFF; background: rgba(178, 12, 255, 0.10);"></q-btn>
-        </div>
-        <div class="marketing-right" style="width: 45%; display: flex; justify-content: flex-end;">
-          <p class="marketing-quote"
-            style="font-family: DidactGothic; font-size: 20px; font-style: normal; font-weight: 400; line-height: normal; margin: 0; width: 236px;">
-            {{ secondMktText }}
-          </p>
-        </div>
-      </div>
-      <div class="text-image-container"
-        style="border-radius: 15px; width: 1045px; height: 62px; z-index: 2; margin: 236px auto 0px; position: relative; align-items: flex-end; display: flex; justify-content: center; background: linear-gradient(90deg, #AE00FF47 0%, #65009347 21.15%, #B617FF47 58.17%, #69009947 89.42%)">
-        <p class="text-image"
-          style="color: var(--q-secondary); text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); font-family: Inter; font-size: 25px; font-style: normal; font-weight: 600; line-height: normal;">
-          {{ textImage }}
-        </p>
-      </div>
-      <div class="images-portfolio"
-        style="margin-top: 150px; width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto;">
+      <div class="images-portfolio q-mt-xl" style="width: 100%; margin-left: auto; margin-right: auto;">
         <div v-for="(group, index) in projectGroups" :key="index"
+          :style="{ 'flex-direction': $q.screen.lt.md ? 'column' : 'row' }"
           style="display: flex; gap: 20px; margin-bottom: 20px;">
-          <div v-for="project in group" :key="project.bg" style="position: relative; width: 50%;">
+          <div v-for="project in group" :key="project.bg" :style="{ 'width': $q.screen.lt.md ? '100%' : '50%' }"
+            style="position: relative;">
             <img :src="project.bg" alt="" style="width: 100%; height: auto; object-fit: cover; border-radius: 8px;">
             <img :src="project.logo" alt=""
               style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-height: 70%; max-width: 70%;">
@@ -185,43 +233,59 @@ const toggleTopic = (topic: Topic) => {
         </div>
       </div>
 
-      <div class="main-portfolio" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 50px 0;">
+      <div class="main-portfolio q-my-xl" style="width: 100%; margin: 0 auto; padding: 50px;">
         <div class="portfolio-area-title">
-          <p
-            style="color: #FFF; font-family: 'BebasNeue'; font-size: 96px; font-style: normal; font-weight: 400; line-height: 2; margin: 0;">
-            O QUE NÓS</p>
-          <p
-            style="color: #FFF; font-family: 'BebasNeue'; font-size: 300px; font-style: normal; font-weight: 400; line-height: 0.8; margin: 0; margin-top: -30px; background: var(--Degrade-principal, linear-gradient(263deg, #00C2FF 5.03%, #6F01A1 97.89%)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
-            FAZEMOS</p>
+          <p style="color: #FFF; font-family: 'BebasNeue'; font-style: normal; font-weight: 400; line-height: 1.2;"
+            :style="{ 'font-size': $q.screen.lt.md ? '36px' : '96.748px' }">
+            O QUE NÓS
+          </p>
+          <p style="color: #FFF; font-family: 'BebasNeue'; font-style: normal; font-weight: 400; margin: 0; background: var(--Degrade-principal, linear-gradient(263deg, #00C2FF 5.03%, #6F01A1 97.89%)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+            :style="{
+              'font-size': $q.screen.lt.md ? '96.748px' : '300px',
+              'line-height': $q.screen.lt.md ? '0.9' : '0.8',
+              'margin-top': $q.screen.lt.md ? '-20px' : '-30px'
+            }">
+            FAZEMOS
+          </p>
         </div>
+
         <div v-for="topic in topics" :key="topic.id"
           style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 15px;">
           <div @click="toggleTopic(topic)"
-            style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 20px 0; ">
+            style="display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 15px 0;">
             <div style="display: flex; align-items: center;">
-              <span style="color: #B20CFF; font-family: 'BebasNeue'; font-size: 24px; margin-right: 15px;">
+              <span style="color: #B20CFF; font-family: 'BebasNeue'; margin-right: 10px;"
+                :style="{ 'font-size': $q.screen.lt.md ? '14px' : '24px' }">
                 ({{ topic.id.toString().padStart(2, '0') }})
               </span>
-              <h3 style="color: #FFF; font-family: 'Inter'; font-size: 24px; margin: 0; ">
+              <h3 style="color: #FFF; font-family: 'Inter'; margin: 0;"
+                :style="{ 'font-size': $q.screen.lt.md ? '16px' : '24px' }">
                 {{ topic.title }}
               </h3>
             </div>
-            <span style="color: #FFF; font-size: 24px; transition: transform 0.3s;"
-              :style="{ transform: topic.expanded ? 'rotate(180deg)' : 'rotate(0deg)' }">
+            <span style="color: #FFF; transition: transform 0.3s;" :style="{
+              'font-size': $q.screen.lt.md ? '16px' : '24px',
+              transform: topic.expanded ? 'rotate(180deg)' : 'rotate(0deg)'
+            }">
               ▼
             </span>
           </div>
 
-          <div v-if="topic.expanded" style="padding: 20px 0 40px; display: flex; flex-direction: column; gap: 30px;">
+          <div v-if="topic.expanded" style="padding: 15px 0 30px; display: flex; flex-direction: column; gap: 20px;">
             <div style="width: 100%;">
-              <p style="color: #FFF; font-family: 'Inter'; font-size: 18px; line-height: 1.6; margin-bottom: 30px;">
+              <p style="color: #FFF; font-family: 'Inter'; line-height: 1.6; margin-bottom: 20px;"
+                :style="{ 'font-size': $q.screen.lt.md ? '14px' : '18px' }">
                 {{ topic.content.description }}
               </p>
             </div>
-            <div style="width: 100%; display: flex; gap: 20px; align-items: stretch;">
+            <div style="width: 100%; display: flex; flex-wrap: wrap; gap: 15px; align-items: stretch;"
+              :style="{ 'flex-direction': $q.screen.lt.md ? 'column' : 'row' }">
               <div v-for="(img, idx) in topic.content.images" :key="idx"
-                style="flex: 1; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 8px;">
-                <img :src="img" style="max-height: 439px; width: auto; object-fit: contain;">
+                style="flex: 1; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 8px; min-width: 200px;">
+                <img :src="img" :style="{
+                  'max-height': $q.screen.lt.md ? '250px' : '439px',
+                  'width': $q.screen.lt.md ? '100%' : 'auto'
+                }" style="object-fit: contain;">
               </div>
             </div>
           </div>

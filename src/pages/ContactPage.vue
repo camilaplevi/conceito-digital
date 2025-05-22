@@ -34,7 +34,8 @@ const onSubmit = () => {
 </script>
 
 <template>
-    <div style="
+    <q-page style="background: radial-gradient(50% 50% at 50% 50%, #242424 0%, #000 100%)">
+        <div style="
         min-height: 100vh;
         width: 100%;
         margin: 0 auto;
@@ -47,13 +48,13 @@ const onSubmit = () => {
         box-sizing: border-box;
         justify-content: center;
     ">
-        <div class="gt-sm" style="
+            <div class="gt-sm" style="
             flex: 1;
             min-width: 300px;
             max-width: calc(1050px - 537px - 60px);
         ">
-            <div class="title-page" style="text-align: left;">
-                <p style="
+                <div class="title-page" style="text-align: left;">
+                    <p style="
                     white-space: pre-line; 
                     font-family: 'BebasNeue';
                     font-size: 146.988px;
@@ -68,39 +69,39 @@ const onSubmit = () => {
                     padding: 0;
                     display: inline-block;
                 ">
-                    {{ titlePage }}
-                </p>
-            </div>
+                        {{ titlePage }}
+                    </p>
+                </div>
 
-            <div style="
+                <div style="
                 color: #aaaaaa;
                 margin-top: 40px;
                 max-width: 600px;
             ">
-                <p style="font-family: DidactGothic; font-size: 20px; line-height: 1.6;">{{ contactText }}</p>
-                <p style="font-family: DidactGothic; font-size: 20px; margin-top: 20px;">{{ contactSupport }}</p>
+                    <p style="font-family: DidactGothic; font-size: 20px; line-height: 1.6;">{{ contactText }}</p>
+                    <p style="font-family: DidactGothic; font-size: 20px; margin-top: 20px;">{{ contactSupport }}</p>
 
-                <div style="margin-top: 40px;">
-                    <p style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center;">
-                        <q-icon name="mdi-whatsapp" color="secondary" style="margin-right: 8px;" />
-                        {{ textWhatsapp }} {{ contactWhatsapp }}
-                    </p>
-                    <p style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center;">
-                        <q-icon name="mdi-email-arrow-right-outline" color="secondary" style="margin-right: 8px;" />
-                        {{ textEmail }} {{ contactEmail }}
-                    </p>
+                    <div style="margin-top: 40px;">
+                        <p style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center;">
+                            <q-icon name="mdi-whatsapp" color="secondary" style="margin-right: 8px;" />
+                            {{ textWhatsapp }} {{ contactWhatsapp }}
+                        </p>
+                        <p style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center;">
+                            <q-icon name="mdi-email-arrow-right-outline" color="secondary" style="margin-right: 8px;" />
+                            {{ textEmail }} {{ contactEmail }}
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div style="
+            <div style="
             flex: 1;
             min-width: 300px;
             max-width: 537px;
             order: 1;
         ">
-            <div class="lt-md title-page" style="text-align: left; margin-bottom: 40px;">
-                <p style="
+                <div class="lt-md title-page" style="text-align: left; margin-bottom: 40px;">
+                    <p style="
                     white-space: pre-line; 
                     font-family: 'BebasNeue';
                     font-size: 98px;
@@ -115,11 +116,11 @@ const onSubmit = () => {
                     padding: 0;
                     display: inline-block;
                 ">
-                    {{ titlePage }}
-                </p>
-            </div>
+                        {{ titlePage }}
+                    </p>
+                </div>
 
-            <q-form @submit.prevent="onSubmit" style="
+                <q-form @submit.prevent="onSubmit" style="
                 width: 100%;
                 max-width: 537px;
                 border-radius: 12px;
@@ -128,49 +129,50 @@ const onSubmit = () => {
                 color: white;
                 box-sizing: border-box;
             ">
-                <label class="labels-form">{{ formLabels.name }}</label>
-                <q-input class="inputs-form" v-model="name" :label="formLabels.namePlaceholder" standout
-                    style="margin-bottom: 14px;" />
+                    <label class="labels-form">{{ formLabels.name }}</label>
+                    <q-input class="inputs-form" v-model="name" :label="formLabels.namePlaceholder" standout
+                        style="margin-bottom: 14px;" />
 
-                <label class="labels-form">{{ formLabels.email }}</label>
-                <q-input class="inputs-form" v-model="email" type="email" :label="formLabels.emailPlaceholder" standout
-                    style="margin-bottom: 14px;" />
+                    <label class="labels-form">{{ formLabels.email }}</label>
+                    <q-input class="inputs-form" v-model="email" type="email" :label="formLabels.emailPlaceholder"
+                        standout style="margin-bottom: 14px;" />
 
-                <label class="labels-form">{{ formLabels.phone }}</label>
-                <q-input class="inputs-form" v-model="phone" :label="formLabels.phonePlaceholder" standout
-                    style="margin-bottom: 14px; " mask="(##) #####-####" />
+                    <label class="labels-form">{{ formLabels.phone }}</label>
+                    <q-input class="inputs-form" v-model="phone" :label="formLabels.phonePlaceholder" standout
+                        style="margin-bottom: 14px; " mask="(##) #####-####" />
 
-                <p style="font-family: DidactGothic; font-size: 16px; margin-bottom: 20px;">
-                    {{ formLabels.marketingQuestion }}
-                </p>
+                    <p style="font-family: DidactGothic; font-size: 16px; margin-bottom: 20px;">
+                        {{ formLabels.marketingQuestion }}
+                    </p>
 
-                <q-option-group :options="[
-                    { label: 'Sim', value: 'true' },
-                    { label: 'Não', value: 'false' }
-                ]" type="radio" v-model="hasMarketingDept" style="margin-bottom: 20px;" class="custom-radio-group" />
-            </q-form>
+                    <q-option-group :options="[
+                        { label: 'Sim', value: 'true' },
+                        { label: 'Não', value: 'false' }
+                    ]" type="radio" v-model="hasMarketingDept" style="margin-bottom: 20px;" class="custom-radio-group" />
+                </q-form>
 
-            <div class="lt-md" style="
+                <div class="lt-md" style="
                 color: #aaaaaa;
                 margin-top: 40px;
                 max-width: 100%;
             ">
-                <p style="font-family: DidactGothic; font-size: 18px; line-height: 1.6;">{{ contactText }}</p>
-                <p style="font-family: DidactGothic; font-size: 18px; margin-top: 20px;">{{ contactSupport }}</p>
+                    <p style="font-family: DidactGothic; font-size: 18px; line-height: 1.6;">{{ contactText }}</p>
+                    <p style="font-family: DidactGothic; font-size: 18px; margin-top: 20px;">{{ contactSupport }}</p>
 
-                <div style="margin-top: 40px;">
-                    <p style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center;">
-                        <q-icon name="mdi-whatsapp" color="secondary" style="margin-right: 8px;" />
-                        {{ textWhatsapp }} {{ contactWhatsapp }}
-                    </p>
-                    <p style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center;">
-                        <q-icon name="mdi-email-arrow-right-outline" color="secondary" style="margin-right: 8px;" />
-                        {{ textEmail }} {{ contactEmail }}
-                    </p>
+                    <div style="margin-top: 40px;">
+                        <p style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center;">
+                            <q-icon name="mdi-whatsapp" color="secondary" style="margin-right: 8px;" />
+                            {{ textWhatsapp }} {{ contactWhatsapp }}
+                        </p>
+                        <p style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center;">
+                            <q-icon name="mdi-email-arrow-right-outline" color="secondary" style="margin-right: 8px;" />
+                            {{ textEmail }} {{ contactEmail }}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </q-page>
 </template>
 
 <style lang="scss">
