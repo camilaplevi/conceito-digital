@@ -341,7 +341,8 @@ onMounted(() => {
 <template>
   <q-page class="home-page"
     style="background: radial-gradient(50% 50% at 50% 50%, #242424 0%, #000 100%); position: relative; min-height: 100vh; display: flex; justify-content: center; overflow: hidden;">
-    <div class="main-container" style="width: 100%; max-width: 1200px; margin: 0 auto; position: relative;">
+    <div class="main-container"
+      style="width: 100%; max-width: 1200px; margin: 0 auto; position: relative; margin-top: 30px;">
 
       <div style="position: relative;">
         <div class="main-title" style="position: relative; z-index: 1; text-align: center; line-height: 0.8;">

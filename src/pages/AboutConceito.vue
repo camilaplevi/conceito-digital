@@ -125,7 +125,7 @@ onMounted(() => {
                 </div>
             </div>
 
-            <div class="row equipe-images" style="gap: 27px; margin-top: 60px; margin-bottom: 105px;">
+            <div class="row equipe-images" style="gap: 27px; margin-top: 60px; margin-bottom: 105px; overflow: hidden;">
                 <img :src="imagesConceito.equipeUm" alt="" style="will-change: transform;">
                 <img :src="imagesConceito.equipeDois" alt="" style="will-change: transform;">
                 <img :src="imagesConceito.equipeTres" alt="" style="will-change: transform;">
