@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import { gsap } from 'gsap';
 
 const titlePage = ref('Fale\nconosco');
 const contactText = ref('Aqui na Conceito Digital, acreditamos que boas conexões constroem grandes projetos. Se você quer tirar uma ideia do papel, melhorar sua presença online ou só entender melhor como podemos ajudar, estamos por aqui.');
@@ -31,6 +32,41 @@ const onSubmit = () => {
         hasMarketingDept: hasMarketingDept.value
     });
 };
+
+onMounted(() => {
+    gsap.from(".title-page p", {
+        duration: 0.8,
+        y: 30,
+        opacity: 0,
+        ease: "power2.out"
+    });
+
+    gsap.from(".contact-text-section p", {
+        duration: 0.8,
+        y: 20,
+        opacity: 0,
+        stagger: 0.15,
+        delay: 0.3,
+        ease: "power2.out"
+    });
+
+    gsap.from(".contact-icons p", {
+        duration: 0.6,
+        x: -20,
+        opacity: 0,
+        stagger: 0.1,
+        delay: 0.6,
+        ease: "back.out"
+    });
+
+    gsap.from(".contact-form", {
+        duration: 0.8,
+        y: 30,
+        opacity: 0,
+        delay: 0.4,
+        ease: "power2.out"
+    });
+});
 </script>
 
 <template>
@@ -68,25 +104,32 @@ const onSubmit = () => {
                     margin: 0;
                     padding: 0;
                     display: inline-block;
+                    will-change: transform, opacity;
                 ">
                         {{ titlePage }}
                     </p>
                 </div>
 
-                <div style="
+                <div class="contact-text-section" style="
                 color: #aaaaaa;
                 margin-top: 40px;
                 max-width: 600px;
             ">
-                    <p style="font-family: DidactGothic; font-size: 20px; line-height: 1.6;">{{ contactText }}</p>
-                    <p style="font-family: DidactGothic; font-size: 20px; margin-top: 20px;">{{ contactSupport }}</p>
+                    <p
+                        style="font-family: DidactGothic; font-size: 20px; line-height: 1.6; will-change: transform, opacity;">
+                        {{ contactText }}</p>
+                    <p
+                        style="font-family: DidactGothic; font-size: 20px; margin-top: 20px; will-change: transform, opacity;">
+                        {{ contactSupport }}</p>
 
-                    <div style="margin-top: 40px;">
-                        <p style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center;">
+                    <div class="contact-icons" style="margin-top: 40px;">
+                        <p
+                            style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center; will-change: transform, opacity;">
                             <q-icon name="mdi-whatsapp" color="secondary" style="margin-right: 8px;" />
                             {{ textWhatsapp }} {{ contactWhatsapp }}
                         </p>
-                        <p style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center;">
+                        <p
+                            style="font-family: DidactGothic; font-size: 20px; display: flex; align-items: center; will-change: transform, opacity;">
                             <q-icon name="mdi-email-arrow-right-outline" color="secondary" style="margin-right: 8px;" />
                             {{ textEmail }} {{ contactEmail }}
                         </p>
@@ -115,12 +158,13 @@ const onSubmit = () => {
                     margin: 0;
                     padding: 0;
                     display: inline-block;
+                    will-change: transform, opacity;
                 ">
                         {{ titlePage }}
                     </p>
                 </div>
 
-                <q-form @submit.prevent="onSubmit" style="
+                <q-form @submit.prevent="onSubmit" class="contact-form" style="
                 width: 100%;
                 max-width: 537px;
                 border-radius: 12px;
@@ -128,6 +172,7 @@ const onSubmit = () => {
                 padding: 28px;
                 color: white;
                 box-sizing: border-box;
+                will-change: transform, opacity;
             ">
                     <label class="labels-form">{{ formLabels.name }}</label>
                     <q-input class="inputs-form" v-model="name" :label="formLabels.namePlaceholder" standout
@@ -148,23 +193,30 @@ const onSubmit = () => {
                     <q-option-group :options="[
                         { label: 'Sim', value: 'true' },
                         { label: 'Não', value: 'false' }
-                    ]" type="radio" v-model="hasMarketingDept" style="margin-bottom: 20px;" class="custom-radio-group" />
+                    ]" type="radio" v-model="hasMarketingDept" style="margin-bottom: 20px;"
+                        class="custom-radio-group" />
                 </q-form>
 
-                <div class="lt-md" style="
+                <div class="lt-md contact-text-section" style="
                 color: #aaaaaa;
                 margin-top: 40px;
                 max-width: 100%;
             ">
-                    <p style="font-family: DidactGothic; font-size: 18px; line-height: 1.6;">{{ contactText }}</p>
-                    <p style="font-family: DidactGothic; font-size: 18px; margin-top: 20px;">{{ contactSupport }}</p>
+                    <p
+                        style="font-family: DidactGothic; font-size: 18px; line-height: 1.6; will-change: transform, opacity;">
+                        {{ contactText }}</p>
+                    <p
+                        style="font-family: DidactGothic; font-size: 18px; margin-top: 20px; will-change: transform, opacity;">
+                        {{ contactSupport }}</p>
 
-                    <div style="margin-top: 40px;">
-                        <p style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center;">
+                    <div class="contact-icons" style="margin-top: 40px;">
+                        <p
+                            style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center; will-change: transform, opacity;">
                             <q-icon name="mdi-whatsapp" color="secondary" style="margin-right: 8px;" />
                             {{ textWhatsapp }} {{ contactWhatsapp }}
                         </p>
-                        <p style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center;">
+                        <p
+                            style="font-family: DidactGothic; font-size: 18px; display: flex; align-items: center; will-change: transform, opacity;">
                             <q-icon name="mdi-email-arrow-right-outline" color="secondary" style="margin-right: 8px;" />
                             {{ textEmail }} {{ contactEmail }}
                         </p>
@@ -257,5 +309,15 @@ const onSubmit = () => {
         height: 45px !important;
         min-height: 45px !important;
     }
+}
+
+.inputs-form .q-field__control:hover {
+    background: lighten($middle-grey, 5%) !important;
+    transition: background 0.3s ease;
+}
+
+.inputs-form .q-field--highlighted .q-field__control {
+    background: lighten($middle-grey, 10%) !important;
+    transition: background 0.3s ease;
 }
 </style>

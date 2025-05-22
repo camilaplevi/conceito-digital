@@ -31,6 +31,11 @@ import EquipeQuatro from 'src/assets/images/about/equipe-04.svg';
 import EquipeCinco from 'src/assets/images/about/equipe-05.svg';
 import EquipeSeis from 'src/assets/images/about/equipe-06.svg';
 import LogoFooter from 'src/assets/images/conceito-logo-footer.png';
+import InstagramLogo from 'src/assets/images/footer/instagram.png';
+import WhatsappLogo from 'src/assets/images/footer/whatsapp.png';
+import LinkedinLogo from 'src/assets/images/footer/linkedin.png';
+import BehanceLogo from 'src/assets/images/footer/behance.png';
+import YoutubeLogo from 'src/assets/images/footer/youtube.png';
 
 export const imagesConceito = {
   logoConceito: LogoConteito,
@@ -71,4 +76,9 @@ export const imagesConceito = {
   equipeSeis: EquipeSeis,
 
   logoFooter: LogoFooter,
+  instagramLogo: InstagramLogo,
+  whatsappLogo: WhatsappLogo,
+  linkedinLogo: LinkedinLogo,
+  behanceLogo: BehanceLogo,
+  youtubeLogo: YoutubeLogo,
 };

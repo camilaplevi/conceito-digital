@@ -45,7 +45,7 @@ const privacyPolicy = ref('Política de Privacidade')
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="rightDrawerOpen" bordered side="right" behavior="mobile" class="bg-white">
+    <q-drawer v-model="rightDrawerOpen" bordered side="right" behavior="mobile" class="bg-black">
       <img :src="imagesConceito.logoConceito" alt="Logo Conceito Digital"
         style="width: 160px; margin: 20px auto; display: block;" />
       <hr style="width: 90%; margin: 0 auto;" />
@@ -83,13 +83,31 @@ const privacyPolicy = ref('Política de Privacidade')
           <p>{{ termosText }}</p>
           <p>{{ privacyPolicy }}</p>
         </div>
-      </div>
 
+        <div class="images-footer"
+          style="display: grid; grid-template-columns: repeat(3, 60px); grid-template-rows: auto auto; gap: 10px; justify-content: center; align-items: center; margin-top: 20px;">
+          <img :src="imagesConceito.instagramLogo" alt="">
+          <img :src="imagesConceito.whatsappLogo" alt="">
+          <img :src="imagesConceito.linkedinLogo" alt="">
+          <img :src="imagesConceito.behanceLogo" alt="">
+          <img :src="imagesConceito.youtubeLogo" alt="">
+        </div>
+      </div>
     </q-footer>
   </q-layout>
 </template>
 
 <style lang="scss">
+.images-footer img:nth-child(4) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.images-footer img:nth-child(5) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
 @media (max-width: 790px) {
   .logo-mobile {
     width: 140px !important;

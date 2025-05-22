@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { imagesConceito } from 'src/assets/images/Images'
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const aboutTitle = ref('Como nascemos?')
 const firstText = ref('A Conceito Digital nasceu da vontade simples, mas ambiciosa, de transformar boas ideias em experiências relevantes. Somos uma agência de marketing que entende que métricas importam, sim, mas só fazem sentido quando estão conectadas a algo maior: pessoas, histórias, e impacto real.')
@@ -10,6 +14,79 @@ const fourthText = ref('Se você está começando agora ou já tem estrada, não
 const fifthText = ref('Nosso trabalho combina criatividade, tecnologia e inteligência de mercado para construir presenças digitais consistentes, autênticas e relevantes. Porque, no fim do dia, nosso objetivo é simples: fazer com que sua marca se comunique melhor, se conecte com o público certo e cresça com propósito.')
 const sixthText = ref('Seja bem-vindo à Conceito Digital. A gente está aqui pra somar. sem promessas mirabolantes, mas com muito trabalho bem feito.')
 
+onMounted(() => {
+    gsap.to(".about-title p", {
+        duration: 4,
+        opacity: 0.8,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut"
+    });
+
+    gsap.to(".about-title p", {
+        duration: 6,
+        "text-shadow": "0 0 10px rgba(175, 0, 255, 0.7)",
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut"
+    });
+
+    gsap.from(".about-title p", {
+        duration: 1.5,
+        y: 100,
+        opacity: 0,
+        ease: "back.out(1.7)",
+        delay: 0.3
+    });
+
+    gsap.from(".text-area", {
+        duration: 1,
+        y: 30,
+        opacity: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".text-area",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".equipe-images img", {
+        duration: 0.8,
+        y: 50,
+        opacity: 0,
+        stagger: 0.15,
+        scrollTrigger: {
+            trigger: ".equipe-images",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        },
+        ease: "back.out(1.2)"
+    });
+
+    gsap.from(".image img", {
+        duration: 1,
+        x: -50,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: ".image-area",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+
+    gsap.from(".text-image p", {
+        duration: 1,
+        x: 50,
+        opacity: 0,
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".image-area",
+            start: "top 80%",
+            toggleActions: "play none none none"
+        }
+    });
+});
 </script>
 
 <template>
@@ -29,6 +106,7 @@ const sixthText = ref('Seja bem-vindo à Conceito Digital. A gente está aqui pr
                     margin: 0;
                     padding: 0;
                     display: inline-block;
+                    will-change: transform, opacity, text-shadow;
                 ">{{ aboutTitle }}</p>
             </div>
 
@@ -39,27 +117,27 @@ const sixthText = ref('Seja bem-vindo à Conceito Digital. A gente está aqui pr
             <div class="row image-area" style="margin-top: 40px; gap: 40px; align-items: flex-start;">
                 <div class="image" style="flex: 1; min-width: 300px;">
                     <img :src="imagesConceito.conceitoImage" alt=""
-                        style="width: 100%; height: auto; border-radius: 8px;">
+                        style="width: 100%; height: auto; border-radius: 8px; will-change: transform;">
                 </div>
                 <div class="text-image" style="flex: 1; min-width: 300px;">
-                    <p class="text-area">{{ secondText }}</p>
-                    <p class="text-area" style="margin-top: 45px;">{{ thirdText }}</p>
+                    <p class="text-area" style="will-change: transform;">{{ secondText }}</p>
+                    <p class="text-area" style="margin-top: 45px; will-change: transform;">{{ thirdText }}</p>
                 </div>
             </div>
 
             <div class="row equipe-images" style="gap: 27px; margin-top: 60px; margin-bottom: 105px;">
-                <img :src="imagesConceito.equipeUm" alt="">
-                <img :src="imagesConceito.equipeDois" alt="">
-                <img :src="imagesConceito.equipeTres" alt="">
-                <img :src="imagesConceito.equipeQuatro" alt="">
-                <img :src="imagesConceito.equipeCinco" alt="">
-                <img :src="imagesConceito.equipeSeis" alt="">
+                <img :src="imagesConceito.equipeUm" alt="" style="will-change: transform;">
+                <img :src="imagesConceito.equipeDois" alt="" style="will-change: transform;">
+                <img :src="imagesConceito.equipeTres" alt="" style="will-change: transform;">
+                <img :src="imagesConceito.equipeQuatro" alt="" style="will-change: transform;">
+                <img :src="imagesConceito.equipeCinco" alt="" style="will-change: transform;">
+                <img :src="imagesConceito.equipeSeis" alt="" style="will-change: transform;">
             </div>
 
             <div class="bottom-texts" style="margin-top: 40px;">
-                <p class="text-area">{{ fourthText }}</p>
-                <p class="text-area" style="margin-top: 45px;">{{ fifthText }}</p>
-                <p class="text-area" style="margin-top: 45px;">{{ sixthText }}</p>
+                <p class="text-area" style="will-change: transform;">{{ fourthText }}</p>
+                <p class="text-area" style="margin-top: 45px; will-change: transform;">{{ fifthText }}</p>
+                <p class="text-area" style="margin-top: 45px; will-change: transform;">{{ sixthText }}</p>
             </div>
         </div>
     </q-page>
@@ -72,6 +150,38 @@ const sixthText = ref('Seja bem-vindo à Conceito Digital. A gente está aqui pr
     color: $lightGrey;
     line-height: normal;
     text-align: justify;
+}
+
+@keyframes title-pulse {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes title-glow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(175, 0, 255, 0.7);
+    }
+
+    100% {
+        text-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
+    }
+}
+
+.about-title p {
+    animation: title-pulse 4s ease-in-out infinite, title-glow 6s ease-in-out infinite;
 }
 
 @media (min-width: 769px) {
