@@ -224,6 +224,7 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
       border-radius: 22.771px;
       height: 31px;
       padding: 5px 20px;
+      font-weight: 600;
     }
   }
 }

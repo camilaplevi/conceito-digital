@@ -499,7 +499,7 @@ onMounted(() => {
               <p style="font-family: BebasNeue; font-size: 54px; line-height: normal; margin-bottom: 10px;  color: var(--q-secondary); will-change: transform;"
                 :style="$q.screen.lt.md ? { 'font-size': '16px', 'margin-bottom': '5px' } : {}">
                 {{ consultoriaTitle }}</p>
-              <p style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px; padding: 10px; border-radius: 8px; color: var(--q-primary); position: relative; padding-left: 40px; will-change: transform;"
+              <p style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px;     padding: 10px 70px 10px 40px; border-radius: 8px; color: var(--q-primary); position: relative; will-change: transform;"
                 :style="$q.screen.lt.md ? { 'font-size': '11px', 'padding': '8px', 'padding-left': '30px', 'margin-bottom': '10px', 'z-index': '2' } : {}">
                 <span
                   style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 15px; height: 5px; background-color: #00C2FF;"
@@ -509,15 +509,15 @@ onMounted(() => {
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
               <img :src="imagesConceito.imageTabuleiro"
-                style="width: 100%; border-radius: 8px; z-index: 1; margin-top: -130px; will-change: transform;"
+                style="width: 100%; border-radius: 8px; z-index: 1; margin-top: -60px; will-change: transform;"
                 :style="$q.screen.lt.md ? { 'margin-top': '-80px', 'max-width': '400px', 'margin-left': '-50px' } : {}">
             </div>
           </div>
 
-          <div style="position: relative; margin-top: -220px;" :class="{ 'mobile-text-block-2': $q.screen.lt.md }">
+          <div style="position: relative; margin-top: -150px;" :class="{ 'mobile-text-block-2': $q.screen.lt.md }">
             <div style="position: absolute; top: 0; left: 0; z-index: 2; width: 100%;"
               :class="{ 'mobile-text-content-2': $q.screen.lt.md }">
-              <p style="font-size: 24px; font-weight: 600; margin-bottom: 10px;  padding: 10px; border-radius: 8px; color: var(--q-secondary); will-change: transform;"
+              <p style="font-family: Inter; font-size: 24px; font-weight: 600; margin-bottom: 10px;  padding: 10px; border-radius: 8px; color: var(--q-secondary); will-change: transform;"
                 :style="$q.screen.lt.md ? { 'font-size': '16px', 'margin-bottom': '5px' } : {}">
                 {{ mentoriaTitle }}</p>
               <p style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px; padding: 10px; border-radius: 8px; color: var(--q-primary); position: relative; padding-left: 40px; will-change: transform;"
@@ -597,7 +597,7 @@ onMounted(() => {
               {{ contentThirdText }}
             </p>
             <p class="content-text"
-              style="margin-left: -120px; margin-top: 50px; position: relative; will-change: transform;" :style="$q.screen.lt.md ? {
+              style="margin-left: -70px; margin-top: 50px; position: relative; will-change: transform;" :style="$q.screen.lt.md ? {
                 'font-size': '16px',
                 'margin-left': '-60px',
                 'margin-top': '15px',
