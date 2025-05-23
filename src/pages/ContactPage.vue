@@ -312,12 +312,12 @@ onMounted(() => {
 }
 
 .inputs-form .q-field__control:hover {
-    background: lighten($middle-grey, 5%) !important;
+    background: ($middle-grey, 5%) !important;
     transition: background 0.3s ease;
 }
 
 .inputs-form .q-field--highlighted .q-field__control {
-    background: lighten($middle-grey, 10%) !important;
+    background: ($middle-grey, 10%) !important;
     transition: background 0.3s ease;
 }
 </style>

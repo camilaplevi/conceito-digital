@@ -42,9 +42,7 @@ const discoverTextThree = ref('Ferramentas práticas que você pode aplicar agor
 
 const projects = ref<Project[]>([
   { bg: imagesConceito.bgOneCode, logo: imagesConceito.logoOneCode },
-  { bg: imagesConceito.bgDirectzap, logo: imagesConceito.logoDirectzap },
-  { bg: imagesConceito.bgKalvinho, logo: imagesConceito.logoKalvinho },
-  { bg: imagesConceito.bgNeoenergia, logo: imagesConceito.logoNeoenergia }
+  { bg: imagesConceito.bgDirectzap, logo: imagesConceito.logoDirectzap }
 ]);
 
 const chunkArray = <T,>(arr: T[], size: number): T[][] => {
@@ -152,30 +150,6 @@ const toggleTopic = (topic: Topic) => {
 
 onMounted(() => {
 
-  gsap.to(".content-title-gradient", {
-    duration: 4,
-    opacity: 0.8,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut"
-  });
-
-  gsap.to(".content-title-gradient", {
-    duration: 6,
-    "text-shadow": "0 0 10px rgba(175, 0, 255, 0.7)",
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut"
-  });
-
-  gsap.from(".main-title p", {
-    duration: 1.5,
-    y: 100,
-    opacity: 0,
-    ease: "back.out(1.7)",
-    delay: 0.3
-  });
-
   gsap.from(".marketing-btn", {
     duration: 0.8,
     scale: 0.5,
@@ -200,19 +174,6 @@ onMounted(() => {
     ease: "back.out"
   });
 
-
-  gsap.from(".portfolio-area-title p", {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: ".portfolio-area-title",
-      start: "top 80%",
-      toggleActions: "play none none none"
-    }
-  });
-
   gsap.from(".main-portfolio > div", {
     duration: 0.8,
     y: 50,
@@ -220,17 +181,6 @@ onMounted(() => {
     stagger: 0.15,
     scrollTrigger: {
       trigger: ".main-portfolio",
-      start: "top 80%",
-      toggleActions: "play none none none"
-    }
-  });
-
-  gsap.from(".products-title", {
-    duration: 1,
-    x: -100,
-    opacity: 0,
-    scrollTrigger: {
-      trigger: ".products-area",
       start: "top 80%",
       toggleActions: "play none none none"
     }
@@ -248,36 +198,12 @@ onMounted(() => {
     }
   });
 
-  gsap.from(".content-title p", {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: ".content-area",
-      start: "top 80%",
-      toggleActions: "play none none none"
-    }
-  });
-
   gsap.from(".content-image", {
     duration: 1,
     x: -100,
     opacity: 0,
     scrollTrigger: {
       trigger: ".content-area",
-      start: "top 80%",
-      toggleActions: "play none none none"
-    }
-  });
-
-  gsap.from(".discover-title p", {
-    duration: 1,
-    y: 50,
-    opacity: 0,
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: ".discover-area",
       start: "top 80%",
       toggleActions: "play none none none"
     }
@@ -754,20 +680,6 @@ onMounted(() => {
 
   100% {
     opacity: 0.8;
-  }
-}
-
-@keyframes text-glow {
-  0% {
-    text-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
-  }
-
-  50% {
-    text-shadow: 0 0 20px rgba(175, 0, 255, 0.7);
-  }
-
-  100% {
-    text-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
   }
 }
 
