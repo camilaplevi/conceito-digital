@@ -15,30 +15,6 @@ const fifthText = ref('Nosso trabalho combina criatividade, tecnologia e intelig
 const sixthText = ref('Seja bem-vindo à Conceito Digital. A gente está aqui pra somar. sem promessas mirabolantes, mas com muito trabalho bem feito.')
 
 onMounted(() => {
-    gsap.to(".about-title p", {
-        duration: 4,
-        opacity: 0.8,
-        yoyo: true,
-        repeat: -1,
-        ease: "sine.inOut"
-    });
-
-    gsap.to(".about-title p", {
-        duration: 6,
-        "text-shadow": "0 0 10px rgba(175, 0, 255, 0.7)",
-        yoyo: true,
-        repeat: -1,
-        ease: "sine.inOut"
-    });
-
-    gsap.from(".about-title p", {
-        duration: 1.5,
-        y: 100,
-        opacity: 0,
-        ease: "back.out(1.7)",
-        delay: 0.3
-    });
-
     gsap.from(".text-area", {
         duration: 1,
         y: 30,
@@ -152,37 +128,6 @@ onMounted(() => {
     text-align: justify;
 }
 
-@keyframes title-pulse {
-    0% {
-        opacity: 0.8;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.8;
-    }
-}
-
-@keyframes title-glow {
-    0% {
-        text-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
-    }
-
-    50% {
-        text-shadow: 0 0 20px rgba(175, 0, 255, 0.7);
-    }
-
-    100% {
-        text-shadow: 0 0 5px rgba(0, 194, 255, 0.5);
-    }
-}
-
-.about-title p {
-    animation: title-pulse 4s ease-in-out infinite, title-glow 6s ease-in-out infinite;
-}
 
 @media (min-width: 769px) {
     .equipe-images {

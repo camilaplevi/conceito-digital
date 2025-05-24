@@ -90,11 +90,27 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
               align-items: center;
               width: 180px;
               margin-right: 100px;">
-          <img :src="imagesConceito.instagramLogo" alt="Instagram" style="grid-column: 1; grid-row: 1;">
-          <img :src="imagesConceito.whatsappLogo" alt="WhatsApp" style="grid-column: 2; grid-row: 1;">
-          <img :src="imagesConceito.linkedinLogo" alt="LinkedIn" style="grid-column: 3; grid-row: 1;">
-          <img :src="imagesConceito.behanceLogo" alt="Behance" style="grid-column: 2; grid-row: 2; margin-left: -60px;">
-          <img :src="imagesConceito.youtubeLogo" alt="YouTube" style="grid-column: 3; grid-row: 2; margin-left: -60px;">
+          <a href="https://www.instagram.com/mktd.conceito?igsh=MWlmcjk2eXc4Mzdmdg==" target="_blank"
+            rel="noopener noreferrer" style="grid-column: 1; grid-row: 1;">
+            <img :src="imagesConceito.instagramLogo" alt="Instagram">
+          </a>
+          <a href="https://wa.me/556199657940" target="_blank" rel="noopener noreferrer"
+            style="grid-column: 2; grid-row: 1;">
+            <img :src="imagesConceito.whatsappLogo" alt="WhatsApp">
+          </a>
+          <a href="https://www.linkedin.com/in/conceito-digital-04b891367/" target="_blank" rel="noopener noreferrer"
+            style="grid-column: 3; grid-row: 1;">
+            <img :src="imagesConceito.linkedinLogo" alt="LinkedIn">
+          </a>
+          <a href="https://www.behance.net/conceitodigital1" target="_blank" rel="noopener noreferrer"
+            style="grid-column: 2; grid-row: 2;">
+            <img :src="imagesConceito.behanceLogo" alt="Behance" style="margin-left: -60px;">
+          </a>
+          <a href="https://www.youtube.com/@ConceitoDigitalmkt" target="_blank" rel="noopener noreferrer"
+            style="grid-column: 3; grid-row: 2;">
+            <img :src="imagesConceito.youtubeLogo" alt="YouTube" style="margin-left: -60px;">
+          </a>
+
         </div>
 
         <!-- Versão Mobile do Lado Esquerdo -->
@@ -125,13 +141,29 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
               align-items: center;
               height: fit-content;
               width: auto;">
-            <img :src="imagesConceito.behanceLogo" alt="Behance"
-              style="width: 58px; grid-column: 1; grid-row: 1; margin-bottom: -75px;">
-            <img :src="imagesConceito.youtubeLogo" alt="YouTube"
-              style="width: 58px; grid-column: 1; grid-row: 2; margin-bottom: -75px;">
-            <img :src="imagesConceito.linkedinLogo" alt="LinkedIn" style="width: 58px; grid-column: 2; grid-row: 1;">
-            <img :src="imagesConceito.instagramLogo" alt="Instagram" style="width: 58px; grid-column: 2; grid-row: 2;">
-            <img :src="imagesConceito.whatsappLogo" alt="WhatsApp" style="width: 58px; grid-column: 2; grid-row: 3;">
+            <a href="https://www.behance.net/conceitodigital1" target="_blank" rel="noopener noreferrer"
+              style="grid-column: 1; grid-row: 1;">
+              <img :src="imagesConceito.behanceLogo" alt="Behance" style="width: 58px;margin-bottom: -57px;">
+            </a>
+            <a href="https://www.youtube.com/@ConceitoDigitalmkt" target="_blank" rel="noopener noreferrer"
+              style="grid-column: 1; grid-row: 2;">
+              <img :src="imagesConceito.youtubeLogo" alt="YouTube" style="width: 58px; margin-bottom: -57px;">
+            </a>
+            <a href="https://www.instagram.com/mktd.conceito?igsh=MWlmcjk2eXc4Mzdmdg==" target="_blank"
+              rel="noopener noreferrer" style="grid-column: 2; grid-row: 1;">
+              <img :src="imagesConceito.instagramLogo" alt="Instagram" style="width: 58px; ">
+            </a>
+            <a href="https://wa.me/556199657940" target="_blank" rel="noopener noreferrer"
+              style="grid-column: 2; grid-row: 2;">
+              <img :src="imagesConceito.whatsappLogo" alt="WhatsApp" style="width: 58px; ">
+            </a>
+            <a href="https://www.linkedin.com/in/conceito-digital-04b891367/" target="_blank" rel="noopener noreferrer"
+              style="grid-column: 2; grid-row: 3;">
+              <img :src="imagesConceito.linkedinLogo" alt="LinkedIn" style="width: 58px;">
+            </a>
+
+
+
           </div>
         </div>
       </div>
