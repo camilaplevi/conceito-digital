@@ -496,14 +496,14 @@ onMounted(() => {
           <div style="position: relative; margin-bottom: 40px;" :class="{ 'mobile-text-block-1': $q.screen.lt.md }">
             <div style="position: absolute; top: 0; left: 0; z-index: 2; width: 100%;"
               :class="{ 'mobile-text-content': $q.screen.lt.md }">
-              <p style="font-family: BebasNeue; font-size: 54px; line-height: normal; margin-bottom: 10px;  color: var(--q-secondary); will-change: transform;"
-                :style="$q.screen.lt.md ? { 'font-size': '16px', 'margin-bottom': '5px' } : {}">
+              <p style="font-family: Inter; font-size: 34px; font-weight: 600; line-height: normal; margin: 0;  color: var(--q-secondary); will-change: transform;"
+                :style="$q.screen.lt.md ? { 'font-size': '16px', 'margin': '0', 'font-weight': '600' } : {}">
                 {{ consultoriaTitle }}</p>
               <p style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px;     padding: 10px 70px 10px 40px; border-radius: 8px; color: var(--q-primary); position: relative; will-change: transform;"
-                :style="$q.screen.lt.md ? { 'font-size': '11px', 'padding': '8px', 'padding-left': '30px', 'margin-bottom': '10px', 'z-index': '2' } : {}">
+                :style="$q.screen.lt.md ? { 'font-size': '11px', 'padding': '0', 'padding-left': '30px', 'margin-bottom': '10px', 'z-index': '2' } : {}">
                 <span
                   style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 15px; height: 5px; background-color: #00C2FF;"
-                  :style="$q.screen.lt.md ? { 'left': '3px' } : {}"></span>
+                  :style="$q.screen.lt.md ? { 'left': '3px', 'width': '8px' } : {}"></span>
                 {{ consultoriaText.replace('- ', '') }}
               </p>
             </div>
@@ -517,14 +517,14 @@ onMounted(() => {
           <div style="position: relative; margin-top: -150px;" :class="{ 'mobile-text-block-2': $q.screen.lt.md }">
             <div style="position: absolute; top: 0; left: 0; z-index: 2; width: 100%;"
               :class="{ 'mobile-text-content-2': $q.screen.lt.md }">
-              <p style="font-family: Inter; font-size: 24px; font-weight: 600; margin-bottom: 10px;  padding: 10px; border-radius: 8px; color: var(--q-secondary); will-change: transform;"
-                :style="$q.screen.lt.md ? { 'font-size': '16px', 'margin-bottom': '5px' } : {}">
+              <p style="font-family: Inter; font-size: 24px; font-weight: 600; margin: 0;  padding: 10px; border-radius: 8px; color: var(--q-secondary); will-change: transform;"
+                :style="$q.screen.lt.md ? { 'font-size': '16px', 'margin-bottom': '5px', 'padding': '0', 'margin-left': '10px' } : {}">
                 {{ mentoriaTitle }}</p>
               <p style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px; padding: 10px; border-radius: 8px; color: var(--q-primary); position: relative; padding-left: 40px; will-change: transform;"
-                :style="$q.screen.lt.md ? { 'font-size': '11px', 'padding': '8px', 'padding-left': '30px' } : {}">
+                :style="$q.screen.lt.md ? { 'font-size': '11px', 'padding': '0', 'padding-left': '30px' } : {}">
                 <span
                   style="position: absolute; left: 15px; top: 30%; transform: translateY(-50%); width: 15px; height: 5px; background-color: #00C2FF;"
-                  :style="$q.screen.lt.md ? { 'left': '10px' } : {}"></span>
+                  :style="$q.screen.lt.md ? { 'left': '10px', 'width': '8px' } : {}"></span>
                 {{ mentoriaText.replace('- ', '') }}
               </p>
             </div>

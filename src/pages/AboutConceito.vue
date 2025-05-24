@@ -125,7 +125,7 @@ onMounted(() => {
                 </div>
             </div>
 
-            <div class="row equipe-images" style="gap: 27px; margin-top: 60px; margin-bottom: 105px; overflow: hidden;">
+            <div class="row equipe-images" style="gap: 27px; margin-top: 38px; margin-bottom: 43px; overflow: hidden;">
                 <img :src="imagesConceito.equipeUm" alt="" style="will-change: transform;">
                 <img :src="imagesConceito.equipeDois" alt="" style="will-change: transform;">
                 <img :src="imagesConceito.equipeTres" alt="" style="will-change: transform;">
@@ -197,6 +197,12 @@ onMounted(() => {
         order: 3;
     }
 
+    .equipe-images img {
+        width: calc(50% - 8px);
+        margin-bottom: 16px;
+        object-fit: cover;
+    }
+
     .equipe-images {
         order: 4;
     }
@@ -217,12 +223,12 @@ onMounted(() => {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 21px;
 
         img {
             width: 97.326px;
             object-fit: cover;
             flex-basis: calc(33.333% - 14px);
+            margin-bottom: 20PX;
         }
     }
 

@@ -62,53 +62,83 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
     </q-page-container>
 
     <q-footer style="background-color: black;">
-      <div class="row justify-around items-center q-py-lg"
-        style="max-width: 1250px; align-items: center; margin: auto;">
-        <div class="col-auto">
-          <img :src="imagesConceito.logoFooter" alt="Logo Conceito Digital" style="width: 117px; height: auto; " />
-        </div>
+      <div class="row items-center q-py-lg" style="max-width: 1050px; margin: auto; justify-content: space-between;">
+        <!-- Lado Esquerdo Desktop -->
+        <div class="row items-center gt-sm" style="gap: 100px;">
+          <img :src="imagesConceito.logoFooter" alt="Logo Conceito Digital" style="width: 117px; height: auto;" />
 
-        <div class="desktop-menu row items-center gt-sm">
-          <ul class="menu-list-footer"
-            style="list-style: none; padding: 0; margin: 0; display: flex; align-items: center; flex-direction: column;">
-            <li v-for="item in menuItems" :key="item.id" style="margin-right: 20px; position: relative;">
-              <router-link :to="item.path" :class="{ 'active-route': route.path === `/${item.path}` }"
-                style="text-decoration: none; font-family: Inter; font-size: 17.161px; font-weight: 400; line-height: normal; padding: 10px 20px; position: relative; transition: all 0.3s ease;">
+          <ul class="menu-list-footer" style="list-style: none; padding: 0; margin: 0; margin-left: 60px;">
+            <li v-for="item in menuItems" :key="item.id">
+              <router-link :to="item.path" style="text-decoration: none; font-family: Inter; font-size: 17.161px;">
                 {{ item.label }}
               </router-link>
             </li>
           </ul>
+
+          <div class="termo-policy">
+            <p class="footer-text">{{ termosText }}</p>
+            <p class="footer-text">{{ privacyPolicy }}</p>
+          </div>
         </div>
 
-        <div class="termo-policy">
-          <p class="footer-text">{{ termosText }}</p>
-          <p class="footer-text">{{ privacyPolicy }}</p>
+        <!-- Lado Direito Desktop (Redes Sociais) -->
+        <div class="social-grid-desktop gt-sm" style="display: grid; 
+              grid-template-columns: repeat(3, 1fr); 
+              grid-template-rows: auto auto; 
+              gap: 10px;  
+              justify-items: center; 
+              align-items: center;
+              width: 180px;
+              margin-right: 100px;">
+          <img :src="imagesConceito.instagramLogo" alt="Instagram" style="grid-column: 1; grid-row: 1;">
+          <img :src="imagesConceito.whatsappLogo" alt="WhatsApp" style="grid-column: 2; grid-row: 1;">
+          <img :src="imagesConceito.linkedinLogo" alt="LinkedIn" style="grid-column: 3; grid-row: 1;">
+          <img :src="imagesConceito.behanceLogo" alt="Behance" style="grid-column: 2; grid-row: 2; margin-left: -60px;">
+          <img :src="imagesConceito.youtubeLogo" alt="YouTube" style="grid-column: 3; grid-row: 2; margin-left: -60px;">
         </div>
 
-        <div class="social-grid" style="display: grid; 
-            grid-template-columns: repeat(5, 1fr); 
-            grid-template-rows: auto auto; 
-            gap: 10px 5px;  
-            justify-items: center; 
-            align-items: center; 
-            width: 100%; 
-            max-width: 250px;">
+        <!-- Versão Mobile do Lado Esquerdo -->
+        <div class="row lt-md" style="width: 100%; justify-content: center;">
+          <div class="col-6">
+            <div class="row items-center justify-between" style="width: 100%;">
+              <img :src="imagesConceito.logoConceito" alt="Logo Conceito Digital" style="width: 100px; height: auto;" />
+            </div>
 
-          <img :src="imagesConceito.instagramLogo" alt="Instagram" style="width: 40px; grid-column: 3; grid-row: 1;">
-          <img :src="imagesConceito.whatsappLogo" alt="WhatsApp" style="width: 40px; grid-column: 4; grid-row: 1;">
-          <img :src="imagesConceito.linkedinLogo" alt="LinkedIn" style="width: 40px; grid-column: 5; grid-row: 1;">
+            <ul class="menu-list-footer"
+              style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; flex-direction: column;">
+              <li v-for="item in menuItems" :key="item.id">
+                <router-link :to="item.path">
+                  {{ item.label }}
+                </router-link>
+              </li>
+            </ul>
 
-          <img :src="imagesConceito.behanceLogo" alt="Behance"
-            style="width: 40px; grid-column: 4; grid-row: 2; margin-left: -45px;">
-          <img :src="imagesConceito.youtubeLogo" alt="YouTube"
-            style="width: 40px; grid-column: 5; grid-row: 2; margin-left: -38px;">
+            <div class="termo-policy" style="margin-bottom: 20px;">
+              <p class="footer-text" style="font-size: 16px; margin: 0;">{{ termosText }}</p>
+              <p class="footer-text" style="font-size: 16px; text-decoration: underline;">{{ privacyPolicy }}</p>
+            </div>
+          </div>
+          <div class="social-grid-mobile lt-md col-6" style="display: grid; 
+              grid-template-columns: auto auto; 
+              grid-template-rows: repeat(3, auto);
+              gap: 10px;
+              align-items: center;
+              height: fit-content;
+              width: auto;">
+            <img :src="imagesConceito.behanceLogo" alt="Behance"
+              style="width: 58px; grid-column: 1; grid-row: 1; margin-bottom: -75px;">
+            <img :src="imagesConceito.youtubeLogo" alt="YouTube"
+              style="width: 58px; grid-column: 1; grid-row: 2; margin-bottom: -75px;">
+            <img :src="imagesConceito.linkedinLogo" alt="LinkedIn" style="width: 58px; grid-column: 2; grid-row: 1;">
+            <img :src="imagesConceito.instagramLogo" alt="Instagram" style="width: 58px; grid-column: 2; grid-row: 2;">
+            <img :src="imagesConceito.whatsappLogo" alt="WhatsApp" style="width: 58px; grid-column: 2; grid-row: 3;">
+          </div>
         </div>
       </div>
-      <hr style="width: 85%; 
-          border: none;
-          border-top: 1px solid var(--q-secondary);
-          margin: 20px auto;">
-      <div class="direitos-area" style="text-align: center; color: var(--q-middleGrey);">
+
+      <hr style="width: 85%; border: none; border-top: 1px solid var(--q-secondary); margin: 20px auto;">
+
+      <div class="direitos-area" style="text-align: center; color: var(--q-middleGrey); padding-bottom: 20px;">
         <p class="footer-text">{{ direitosText }}</p>
       </div>
     </q-footer>
@@ -215,7 +245,7 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
       border: 1.518px solid rgba(0, 194, 255, 0.30);
       background: #B20CFF;
       color: black !important;
-      font-weight: 600;
+      font-weight: 600 !important;
       height: 31px;
       padding: 5px 20px;
     }
@@ -226,6 +256,19 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
       height: 31px;
       padding: 5px 20px;
       font-weight: 600;
+    }
+  }
+}
+
+.menu-list-footer {
+  a {
+    color: $middle-grey !important;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 16px;
+
+    &:hover {
+      color: lighten($middle-grey, 20%) !important;
     }
   }
 }
