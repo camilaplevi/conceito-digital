@@ -504,7 +504,7 @@ onMounted(() => {
               <p style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px;     padding: 10px 70px 10px 40px; border-radius: 8px; color: var(--q-primary); position: relative; will-change: transform;"
                 :style="$q.screen.lt.md ? { 'font-size': '11px', 'padding': '0', 'padding-left': '30px', 'margin-bottom': '10px', 'z-index': '2' } : {}">
                 <span
-                  style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 15px; height: 5px; background-color: #00C2FF;"
+                  style="position: absolute; left: 15px; top: 35%; transform: translateY(-50%); width: 15px; height: 5px; background-color: #00C2FF;"
                   :style="$q.screen.lt.md ? { 'left': '3px', 'width': '8px' } : {}"></span>
                 {{ consultoriaText.replace('- ', '') }}
               </p>
@@ -519,10 +519,12 @@ onMounted(() => {
           <div style="position: relative; margin-top: -150px;" :class="{ 'mobile-text-block-2': $q.screen.lt.md }">
             <div style="position: absolute; top: 0; left: 0; z-index: 2; width: 100%;"
               :class="{ 'mobile-text-content-2': $q.screen.lt.md }">
-              <p style="font-family: Inter; font-size: 24px; font-weight: 600; margin: 0;  padding: 10px; border-radius: 8px; color: var(--q-secondary); will-change: transform;"
+              <p class="mentoria-title"
+                style="font-family: Inter; font-size: 24px; font-weight: 600; margin: 0;  padding: 10px; border-radius: 8px; color: var(--q-secondary); will-change: transform;"
                 :style="$q.screen.lt.md ? { 'font-size': '16px', 'margin-bottom': '5px', 'padding': '0', 'margin-left': '10px' } : {}">
                 {{ mentoriaTitle }}</p>
-              <p style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px; padding: 10px; border-radius: 8px; color: var(--q-primary); position: relative; padding-left: 40px; will-change: transform;"
+              <p class="mentoria-text"
+                style="font-family: DidactGothic; font-size: 24px; line-height: normal; margin-bottom: 20px; padding: 10px; border-radius: 8px; color: var(--q-primary); position: relative; padding-left: 40px; will-change: transform;"
                 :style="$q.screen.lt.md ? { 'font-size': '11px', 'padding': '0', 'padding-left': '30px' } : {}">
                 <span
                   style="position: absolute; left: 15px; top: 30%; transform: translateY(-50%); width: 15px; height: 5px; background-color: #00C2FF;"
@@ -531,7 +533,7 @@ onMounted(() => {
               </p>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-              <img :src="imagesConceito.imageLampadas"
+              <img class="mentoria-image" :src="imagesConceito.imageLampadas"
                 style="width: 100%; border-radius: 8px; z-index: 1; margin-top: 50px; will-change: transform;"
                 :style="$q.screen.lt.md ? { 'margin-top': '-40px' } : {}">
             </div>
@@ -543,7 +545,7 @@ onMounted(() => {
       <div class="content-area"
         style="width: 100%; max-width: 1200px; margin: 100px auto; padding: 0 20px; position: relative;">
         <div class="content-title" style="text-align: left; margin-bottom: 60px;"
-          :style="$q.screen.lt.md ? { 'margin': '30px' } : {}">
+          :style="$q.screen.lt.md ? { 'margin-left': '30px' } : {}">
           <p style="color: #F2D6FF; font-family: 'BebasNeue'; font-size: 54px; font-weight: 400; line-height: normal; margin: 0; text-transform: uppercase; will-change: transform;"
             :style="$q.screen.lt.md ? { 'font-size': '36px' } : {}">
             {{ contentTitle.split('\n')[0] }}
@@ -566,14 +568,14 @@ onMounted(() => {
               } : {}">
           </div>
           <div class="content-area-texts" style="flex: 1; position: relative; z-index: 2; overflow: visible;"
-            :style="$q.screen.lt.md ? { 'margin-top': '-20px' } : {}">
+            :style="$q.screen.lt.md ? { 'margin-top': '-40px' } : {}">
             <p class="content-text"
               style="width: 593px; margin-top: -50px; margin-left: -260px; position: relative; will-change: transform;"
               :style="$q.screen.lt.md ? {
                 'font-size': '16px',
                 'width': 'calc(100% + 100px)',
                 'margin-top': '0',
-                'margin-left': '-110px',
+                'margin-left': '-120px',
                 'position': 'relative'
               } : {}">
               {{ contentFirstText }}
@@ -583,7 +585,7 @@ onMounted(() => {
               :style="$q.screen.lt.md ? {
                 'font-size': '16px',
                 'width': 'calc(100% + 80px)',
-                'margin-left': '-80px',
+                'margin-left': '-90px',
                 'margin-top': '15px',
                 'position': 'relative'
               } : {}">
@@ -628,7 +630,7 @@ onMounted(() => {
           </div>
 
           <div style="position: relative; z-index: 1; padding: 80px 20px;"
-            :style="$q.screen.lt.md ? { 'padding': '40px 15px' } : {}">
+            :style="$q.screen.lt.md ? { 'padding': '0 15px 40px 15px' } : {}">
             <div class="discover-title">
               <p style="color: #D3AAE7; font-family: 'BebasNeue'; font-size: 96px; font-weight: 400; line-height: normal; letter-spacing: 48px; margin: 0; margin-left: 50px; text-transform: uppercase; will-change: transform;"
                 :style="$q.screen.lt.md ? { 'font-size': '36px', 'letter-spacing': 'normal', 'margin-left': '0' } : {}">
@@ -823,6 +825,24 @@ onMounted(() => {
 
   .q-btn {
     margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .content-title-gradient {
+    font-size: 70px !important;
+  }
+
+  .mentoria-title {
+    font-size: 14px;
+  }
+
+  .mentoria-text {
+    width: 80%;
+  }
+
+  .mentoria-image {
+    width: 80% !important;
   }
 }
 

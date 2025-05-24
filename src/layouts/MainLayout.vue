@@ -290,7 +290,7 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
     font-size: 16px;
 
     &:hover {
-      color: lighten($middle-grey, 20%) !important;
+      color: ($middle-grey, 20%) !important;
     }
   }
 }
