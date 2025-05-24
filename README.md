@@ -1,40 +1,33 @@
-# quasar-digital (conceito-digital)
+# Conceito Digital
 
-quasar-digital-site
+![Conceito Digital](./src/assets/images/logo-conceito.png)
 
-## Install the dependencies
-```bash
-yarn
-# or
-npm install
-```
+## 🚀 Começando
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
-```bash
-quasar dev
-```
+### Pré-requisitos
 
+- Node.js (v16.x ou superior)
+- npm (v8.x ou superior) ou yarn
+- Quasar CLI instalado globalmente (`npm install -g @quasar/cli`)
 
-### Lint the files
-```bash
-yarn lint
-# or
-npm run lint
-```
+### Instalação
 
+1. Clone o repositório:
 
-### Format the files
-```bash
-yarn format
-# or
-npm run format
-```
+   ```bash
+   git clone https://github.com/camilaplevi/conceito-digital.git
+   cd conceito-digital
 
+   ```
 
-### Build the app for production
-```bash
-quasar build
-```
+2. npm install
 
-### Customize the configuration
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-vite/quasar-config-js).
+3. quasar dev
+
+### Tecnologias utilizadas
+
+- Framework Frontend: Quasar Framework (Vue.js 3)
+- Estilização: Sass/SCSS
+- Ícones: Material Icons
+- Build Tool: Vite
+- Animation: GSAP
