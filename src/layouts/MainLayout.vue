@@ -62,7 +62,8 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
     </q-page-container>
 
     <q-footer style="background-color: black;">
-      <div class="row justify-around items-center q-py-lg">
+      <div class="row justify-around items-center q-py-lg"
+        style="max-width: 1250px; align-items: center; margin: auto;">
         <div class="col-auto">
           <img :src="imagesConceito.logoFooter" alt="Logo Conceito Digital" style="width: 117px; height: auto; " />
         </div>

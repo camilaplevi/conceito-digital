@@ -392,7 +392,7 @@ onMounted(() => {
 
       <!--Imagens Portofólio -->
       <div class="images-portfolio q-mt-xl"
-        style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 150px;"
+        style="width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; margin-top: 150px;"
         :style="$q.screen.lt.md ? { 'margin-top': '0' } : {}">
         <div v-for="(group, index) in projectGroups" :key="index"
           :style="{ 'flex-direction': $q.screen.lt.md ? 'column' : 'row' }"
@@ -471,7 +471,7 @@ onMounted(() => {
 
       <!-- PRODUTOS -->
       <div class="products-area"
-        style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 50px 50px 0 50px; display: flex; align-items: flex-start;"
+        style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 50px; display: flex; align-items: flex-start;"
         :class="{ 'products-mobile': $q.screen.lt.md }">
         <div style="flex: 0 0 auto; width: 400px;" :class="{ 'mobile-title': $q.screen.lt.md }">
           <p class="products-title" style="font-family: 'BebasNeue'; 
@@ -610,44 +610,50 @@ onMounted(() => {
       </div>
 
       <!-- DESCUBRA AGORA -->
-      <div class="discover-area"
-        style="width: 100%; max-width: 1200px; text-align: center; position: relative; min-height: 800px; will-change: transform;"
-        :style="$q.screen.lt.md ? { 'min-height': '600px', 'margin': '50px auto' } : {}">
-        <div class="discover-background"
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; border-radius: 15px;">
-          <img :src="imagesConceito.bgDiscover" alt="multidão"
-            style="width: 100%; height: 100%; object-fit: cover; will-change: transform;"
-            :style="$q.screen.lt.md ? { 'object-position': 'center center' } : {}">
-        </div>
+      <div class="full-width-container" style="width: 100%; background: black; position: relative;">
+        <div class="discover-area"
+          style="width: 100%; max-width: 1200px; margin: 0 auto; text-align: center; position: relative; min-height: 800px;"
+          :style="$q.screen.lt.md ? { 'min-height': '600px', 'margin': '50px auto' } : {}">
 
-        <div style="position: relative; z-index: 1; padding: 80px 20px;"
-          :style="$q.screen.lt.md ? { 'padding': '0 15px' } : {}">
-          <div class="discover-title">
-            <p style="color: #D3AAE7; font-family: 'BebasNeue'; font-size: 96px; font-weight: 400; line-height: normal; letter-spacing: 48px; margin: 0; text-transform: uppercase; will-change: transform;"
-              :style="$q.screen.lt.md ? { 'font-size': '36px', 'letter-spacing': 'normal' } : {}">
-              {{ discoverTitle.split('\n')[0] }}
-            </p>
-            <p style="font-family: 'BebasNeue'; font-size: 300px; font-weight: 400; line-height: normal; background: linear-gradient(263deg, #00C2FF 5.03%, #6F01A1 97.89%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; margin-top: -30px; text-transform: uppercase; will-change: transform;"
-              :style="$q.screen.lt.md ? { 'font-size': '96px', 'margin-top': '-15px' } : {}">
-              {{ discoverTitle.split('\n')[1] }}
-            </p>
+          <div class="discover-background"
+            style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100vw; height: 100%; z-index: 0; overflow: hidden;">
+            <img :src="imagesConceito.bgDiscover" alt="multidão"
+              style="width: 100%; height: 100%; object-fit: cover; object-position: center; min-width: 1440px; will-change: transform;"
+              :style="$q.screen.lt.md ? { 'object-position': 'center center', 'min-width': '100%' } : {}">
+            <div
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);">
+            </div>
           </div>
-          <div class="discover-texts"
-            style="color: #C7C7C7; font-family: 'DidactGothic'; font-size: 32px; font-weight: 400; line-height: normal; max-width: 1030px; margin: 0 auto; will-change: transform;"
-            :style="$q.screen.lt.md ? { 'font-size': '18px', 'max-width': '90%' } : {}">
-            <p style="margin-bottom: 30px; will-change: transform;"
-              :style="$q.screen.lt.md ? { 'margin-bottom': '15px' } : {}">{{
-                discovertTextOne }}</p>
-            <p style="margin-bottom: 30px; will-change: transform;"
-              :style="$q.screen.lt.md ? { 'margin-bottom': '15px' } : {}">{{
-                discoverTextTwo
-              }}</p>
-            <p style="will-change: transform;">{{ discoverTextThree }}</p>
-          </div>
-          <div style="margin-top: 40px;" :style="$q.screen.lt.md ? { 'margin-top': '50px' } : {}">
-            <q-btn label="ENTRAR EM CONTATO"
-              style="width: 466px; height: 70px; border-radius: 100px; border: 3px solid var(--Degrade-principal, #00C2FF); color: white; background: linear-gradient(86deg, rgba(178, 12, 255, 0.25) 24.06%, rgba(67, 0, 97, 0.25) 80.45%); will-change: transform;"
-              :style="$q.screen.lt.md ? { 'width': '280px', 'height': '50px', 'font-size': '14px' } : {}" />
+
+          <div style="position: relative; z-index: 1; padding: 80px 20px;"
+            :style="$q.screen.lt.md ? { 'padding': '40px 15px' } : {}">
+            <div class="discover-title">
+              <p style="color: #D3AAE7; font-family: 'BebasNeue'; font-size: 96px; font-weight: 400; line-height: normal; letter-spacing: 48px; margin: 0; margin-left: 50px; text-transform: uppercase; will-change: transform;"
+                :style="$q.screen.lt.md ? { 'font-size': '36px', 'letter-spacing': 'normal', 'margin-left': '0' } : {}">
+                {{ discoverTitle.split('\n')[0] }}
+              </p>
+              <p style="font-family: 'BebasNeue'; font-size: 300px; font-weight: 400; line-height: 0.8; background: linear-gradient(263deg, #00C2FF 5.03%, #6F01A1 97.89%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0; text-transform: uppercase; will-change: transform;"
+                :style="$q.screen.lt.md ? { 'font-size': '96px', 'margin-top': '-15px' } : {}">
+                {{ discoverTitle.split('\n')[1] }}
+              </p>
+            </div>
+            <div class="discover-texts"
+              style="color: #C7C7C7; font-family: 'DidactGothic'; font-size: 32px; font-weight: 400; line-height: normal; max-width: 1030px; margin: 0 auto; will-change: transform; text-align: left;"
+              :style="$q.screen.lt.md ? { 'font-size': '18px', 'max-width': '90%' } : {}">
+              <p style="margin-bottom: 30px; will-change: transform;"
+                :style="$q.screen.lt.md ? { 'margin-bottom': '15px' } : {}">{{
+                  discovertTextOne }}</p>
+              <p style="margin-bottom: 30px; will-change: transform;"
+                :style="$q.screen.lt.md ? { 'margin-bottom': '15px' } : {}">{{
+                  discoverTextTwo
+                }}</p>
+              <p style="will-change: transform;">{{ discoverTextThree }}</p>
+            </div>
+            <div style="margin-top: 70px;" :style="$q.screen.lt.md ? { 'margin-top': '50px' } : {}">
+              <q-btn label="ENTRAR EM CONTATO"
+                style="font-size: 32.579px; font-family: Inter; font-weight: 700; width: 466px; height: 70px; border-radius: 100px; border: 3px solid var(--Degrade-principal, #00C2FF); color: white; background: linear-gradient(86deg, rgba(178, 12, 255, 0.25) 24.06%, rgba(67, 0, 97, 0.25) 80.45%); will-change: transform;"
+                :style="$q.screen.lt.md ? { 'width': '280px', 'height': '50px', 'font-size': '14px' } : {}" />
+            </div>
           </div>
         </div>
       </div>
