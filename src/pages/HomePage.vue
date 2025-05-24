@@ -60,7 +60,7 @@ const topics = ref<Topic[]>([
     title: "After Effects & Motion Graphics",
     expanded: false,
     content: {
-      description: "After Effects é aquele programa que a galera usa pra fazer mágica com vídeos, tipo dar vida a logos, textos e gráficos que, de outro jeito, ficariam ali, parados e sem graça. Ele é o queridinho quando o assunto é criar animações estilosas e efeitos visuais de impacto, seja pra comercial, filme ou post nas redes. Já o tal do Motion Graphics é a arte de animar esses elementos visuais, basicamente fazer tudo se mexer bonito na tela pra deixar o vídeo mais interessante e profissional. Quando você junta os dois, o resultado é aquele tipo de conteúdo que prende o olho, impressiona e dá um upgrade gigante na comunicação visual. Tipo transformar uma ideia parada num espetáculo visual em movimento.",
+      description: "After Effects é aquele programa que a galera usa pra fazer mágica com vídeos, tipo dar vida a logos, textos e gráficos que, de outro jeito, ficariam ali, parados e sem graça.\n Ele é o queridinho quando o assunto é criar animações estilosas e efeitos visuais de impacto, seja pra comercial, filme ou post nas redes.\n Já o tal do Motion Graphics é a arte de animar esses elementos visuais, basicamente fazer tudo se mexer bonito na tela pra deixar o vídeo mais interessante e profissional. Quando você junta os dois, o resultado é aquele tipo de conteúdo que prende o olho, impressiona e dá um upgrade gigante na comunicação visual. Tipo transformar uma ideia parada num espetáculo visual em movimento.",
       images: [imagesConceito.afterEffects, imagesConceito.motionGraphics]
     }
   },
@@ -69,8 +69,8 @@ const topics = ref<Topic[]>([
     title: "Animação e Criação de Mascote",
     expanded: false,
     content: {
-      description: "Com as ferramentas certas, dá pra desenvolver mascotes carismáticos e cheios de estilo, que não só representam sua marca, mas também criam conexão real com o público. Com a animação, esses mascotes ganham vida: piscam, pulam, fazem dancinha e deixam qualquer vídeo, apresentação ou campanha mais divertida, envolvente e memorável. É o tipo de coisa que faz seu público lembrar de você não porque sua marca é incrível (spoiler: não é), mas porque o bonequinho que você criou fez eles rirem, se identificarem…",
-      images: [imagesConceito.kalvinho, imagesConceito.bravinhoKalvinho]
+      description: "Com as ferramentas certas, dá pra desenvolver mascotes carismáticos e cheios de estilo, que não só representam sua marca, mas também criam conexão real com o público.\nCom a animação, esses mascotes ganham vida: piscam, pulam, fazem dancinha e deixam qualquer vídeo, apresentação ou campanha mais divertida, envolvente e memorável.\n É o tipo de coisa que faz seu público lembrar de você não porque sua marca é incrível (spoiler: não é), mas porque o bonequinho que você criou fez eles rirem, se identificarem…",
+      images: []
     }
   },
   {
@@ -78,7 +78,7 @@ const topics = ref<Topic[]>([
     title: "Edição de Vídeos",
     expanded: false,
     content: {
-      description: 'Edição de vídeo é basicamente a arte de pegar um monte de gravação crua, bagunçada e cheia de "peraí, grava de novo" — e transformar tudo isso em um vídeo que parece que foi planejado desde o início (mesmo que não tenha sido). Ela envolve cortar as partes que ninguém quer ver, organizar as cenas pra fazer sentido, ajustar cores pra não parecer que foi filmado numa caverna, melhorar o áudio pra não soar como uma conversa dentro de uma geladeira, e ainda adicionar gráficos, transições e efeitos que deixam tudo com cara de "uau, isso ficou bom". Seja pra redes sociais, campanhas publicitárias ou vídeos mais elaborados, uma boa edição não só deixa o material bonito, mas também garante que a mensagem passe de um jeito claro, envolvente e que realmente prenda a atenção. Tipo maquiagem digital, só que ao invés de esconder espinhas, esconde erros de gravação.',
+      description: 'Edição de vídeo é basicamente a arte de pegar um monte de gravação crua, bagunçada e cheia de "peraí, grava de novo" — e transformar tudo isso em um vídeo que parece que foi planejado desde o início (mesmo que não tenha sido).\n Ela envolve cortar as partes que ninguém quer ver, organizar as cenas pra fazer sentido, ajustar cores pra não parecer que foi filmado numa caverna, melhorar o áudio pra não soar como uma conversa dentro de uma geladeira, e ainda adicionar gráficos, transições e efeitos que deixam tudo com cara de "uau, isso ficou bom".\n Seja pra redes sociais, campanhas publicitárias ou vídeos mais elaborados, uma boa edição não só deixa o material bonito, mas também garante que a mensagem passe de um jeito claro, envolvente e que realmente prenda a atenção. Tipo maquiagem digital, só que ao invés de esconder espinhas, esconde erros de gravação.',
       images: [imagesConceito.edicaoVideos]
     }
   },
@@ -87,7 +87,7 @@ const topics = ref<Topic[]>([
     title: "Criação de sites",
     expanded: false,
     content: {
-      description: "Criar um site é como montar uma vitrine digital que precisa ser bonita, funcionar direitinho e não fazer o visitante sair correndo em 3 segundos. É um processo que mistura design inteligente com programação eficiente, tudo pra garantir que a navegação seja fluida, o carregamento não leve uma eternidade, e o layout funcione tanto no celular do tiozão quanto no monitor ultrawide do designer metido. Um site bem feito não só passa confiança, mas também melhora a experiência de quem acessa e coloca sua marca num lugar de destaque no mundo online. Ele vira seu cartão de visita, seu vendedor 24h e, com sorte, o motivo pelo qual alguém escolhe você em vez do concorrente com aquele site horroroso de 2010. Ou seja: se você existe, mas seu site é ruim… talvez seja melhor voltar a não existir.",
+      description: "Criar um site é como montar uma vitrine digital que precisa ser bonita, funcionar direitinho e não fazer o visitante sair correndo em 3 segundos.\n É um processo que mistura design inteligente com programação eficiente, tudo pra garantir que a navegação seja fluida, o carregamento não leve uma eternidade, e o layout funcione tanto no celular do tiozão quanto no monitor ultrawide do designer metido.\n Um site bem feito não só passa confiança, mas também melhora a experiência de quem acessa e coloca sua marca num lugar de destaque no mundo online. Ele vira seu cartão de visita, seu vendedor 24h e, com sorte, o motivo pelo qual alguém escolhe você em vez do concorrente com aquele site horroroso de 2010.\n Ou seja: se você existe, mas seu site é ruim… talvez seja melhor voltar a não existir.",
       images: [imagesConceito.criacaoSites]
     }
   },
@@ -96,7 +96,7 @@ const topics = ref<Topic[]>([
     title: "FilmMaker",
     expanded: false,
     content: {
-      description: "O filmmaker é basicamente o arquiteto das emoções em vídeo, aquele ser místico que pega uma ideia qualquer e transforma em algo que prende o olhar, cutuca sentimentos e faz o público pensar 'nossa, eu preciso disso' (mesmo que seja um aspirador de pó). Com narrativa bem pensada, enquadramentos que não foram escolhidos no chute, e uma edição afiada, cada cena é construída pra criar conexão real entre marca e audiência. Não é só mostrar, é provocar desejo, gerar identificação e, se tudo der certo, levar à ação. Seja pra campanhas, vídeos institucionais ou conteúdo pra redes sociais, o foco é capturar a atenção nos primeiros segundos, antes que o dedo do espectador decida deslizar pra longe. Usamos técnicas de neuromarketing, psicologia visual e aquele toque mágico que faz sua mensagem ficar grudada na cabeça de quem assiste. Em resumo: é mais do que fazer vídeo bonito. É criar impacto. E fazer parecer fácil, mesmo sendo um caos nos bastidores.",
+      description: "O filmmaker é basicamente o arquiteto das emoções em vídeo, aquele ser místico que pega uma ideia qualquer e transforma em algo que prende o olhar, cutuca sentimentos e faz o público pensar 'nossa, eu preciso disso' (mesmo que seja um aspirador de pó).\n Com narrativa bem pensada, enquadramentos que não foram escolhidos no chute, e uma edição afiada, cada cena é construída pra criar conexão real entre marca e audiência. Não é só mostrar, é provocar desejo, gerar identificação e, se tudo der certo, levar à ação.\n Seja pra campanhas, vídeos institucionais ou conteúdo pra redes sociais, o foco é capturar a atenção nos primeiros segundos, antes que o dedo do espectador decida deslizar pra longe. Usamos técnicas de neuromarketing, psicologia visual e aquele toque mágico que faz sua mensagem ficar grudada na cabeça de quem assiste.\n Em resumo: é mais do que fazer vídeo bonito. É criar impacto. E fazer parecer fácil, mesmo sendo um caos nos bastidores.",
       images: [imagesConceito.filmMakerOne, imagesConceito.filmMakerTwo]
     }
   },
@@ -105,7 +105,7 @@ const topics = ref<Topic[]>([
     title: "Tráfego pago",
     expanded: false,
     content: {
-      description: "Tráfego pago é a arte (ou a ciência desesperada) de colocar sua marca bem na frente dos olhos certos, na hora certa — e sim, pagando por isso. A ideia é simples: você investe em anúncios e, em troca, atrai visitantes qualificados pro seu site, landing page, perfil ou seja lá onde seu funil de vendas começa a sugar. Por trás dos cliques, tem toda uma estratégia: segmentação inteligente, testes A/B, ajustes finos, cópias persuasivas e criativos que não parecem ter sido feitos no Paint. Tudo pensado pra transformar visualizações em cliques, cliques em leads, e leads em gente que abre a carteira. Seja no Google, Instagram, Facebook ou onde seu público estiver se distraindo, o tráfego pago ajuda a escalar resultados com agilidade e precisão. É performance pura: medível, testável e, quando bem feito, irresistível. Ou seja: não é só impulsionar post por impulso. É criar uma máquina de visibilidade que trabalha enquanto você dorme.",
+      description: "Tráfego pago é a arte (ou a ciência desesperada) de colocar sua marca bem na frente dos olhos certos, na hora certa — e sim, pagando por isso. A ideia é simples: você investe em anúncios e, em troca, atrai visitantes qualificados pro seu site, landing page, perfil ou seja lá onde seu funil de vendas começa a sugar.\n Por trás dos cliques, tem toda uma estratégia: segmentação inteligente, testes A/B, ajustes finos, cópias persuasivas e criativos que não parecem ter sido feitos no Paint. Tudo pensado pra transformar visualizações em cliques, cliques em leads, e leads em gente que abre a carteira.\n Seja no Google, Instagram, Facebook ou onde seu público estiver se distraindo, o tráfego pago ajuda a escalar resultados com agilidade e precisão. É performance pura: medível, testável e, quando bem feito, irresistível.\n Ou seja: não é só impulsionar post por impulso. É criar uma máquina de visibilidade que trabalha enquanto você dorme.",
       images: [imagesConceito.trafegoOne, imagesConceito.trafegoTwo]
     }
   },
@@ -114,7 +114,7 @@ const topics = ref<Topic[]>([
     title: "Social Media",
     expanded: false,
     content: {
-      description: "Criamos estratégias e conteúdos que realmente funcionam nas redes sociais, nada de tendências vazias ou estética exagerada só pra parecer 'cool'. Aqui o foco é em resultado: trabalhamos com dados, analisamos métricas e produzimos conteúdo com propósito, pensado pra conectar sua marca com o público certo. Não se trata só de postar bonito, mas de ter consistência, relevância e impacto. Cada publicação tem um objetivo claro, fortalecer sua presença digital, engajar de forma autêntica e fazer sua marca crescer de verdade. Em resumo: menos modinha, mais estratégia.",
+      description: "Criamos estratégias e conteúdos que realmente funcionam nas redes sociais, nada de tendências vazias ou estética exagerada só pra parecer 'cool'. Aqui o foco é em resultado: trabalhamos com dados, analisamos métricas e produzimos conteúdo com propósito, pensado pra conectar sua marca com o público certo.\n Não se trata só de postar bonito, mas de ter consistência, relevância e impacto. Cada publicação tem um objetivo claro, fortalecer sua presença digital, engajar de forma autêntica e fazer sua marca crescer de verdade.\n Em resumo: menos modinha, mais estratégia.",
       images: [imagesConceito.socialMedia]
     }
   },
@@ -267,6 +267,8 @@ onMounted(() => {
 <template>
   <q-page class="home-page"
     style="background: radial-gradient(50% 50% at 50% 50%, #242424 0%, #000 100%); position: relative; min-height: 100vh; display: flex; justify-content: center; overflow: hidden;">
+    <div class="page-background" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+         background: radial-gradient(50% 50% at 50% 50%, #242424 0%, #000 100%); z-index: 0;"></div>
     <div class="main-container"
       style="width: 100%; max-width: 1200px; margin: 0 auto; position: relative; margin-top: 30px;">
 
@@ -449,7 +451,7 @@ onMounted(() => {
           <div v-if="topic.expanded" class="content"
             style="padding: 15px 0 30px; display: flex; flex-direction: column; gap: 20px; overflow: hidden;">
             <div style="width: 100%;">
-              <p style="color: #FFF; font-family: 'Inter'; line-height: 1.6; margin-bottom: 20px; will-change: transform;"
+              <p style="color: #FFF; font-family: 'Inter'; line-height: 1.6; margin-bottom: 20px; will-change: transform;  white-space: pre-line;"
                 :style="{ 'font-size': $q.screen.lt.md ? '14px' : '18px' }">
                 {{ topic.content.description }}
               </p>
@@ -703,11 +705,22 @@ onMounted(() => {
   }
 }
 
-.main-title p,
-.portfolio-area-title p:last-child,
-.products-title,
-.discover-title p:last-child {
-  animation: pulse-gradient 4s ease-in-out infinite, text-glow 6s ease-in-out infinite;
+.main-image-container {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(68, 68, 68, 0.8) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 50%;
+  }
 }
 
 .main-image-container img,
@@ -832,9 +845,5 @@ onMounted(() => {
 .discover-area .q-btn {
   opacity: 1 !important;
   visibility: visible !important;
-}
-
-.content-title-gradient {
-  animation: pulse-gradient 4s ease-in-out infinite, text-glow 6s ease-in-out infinite;
 }
 </style>

@@ -48,6 +48,7 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
     </q-header>
 
     <q-drawer v-model="rightDrawerOpen" side="right" behavior="mobile" overlay elevated>
+      <div class="drawer-backdrop"></div>
       <q-list class="mobile-drawer-content">
         <q-item v-for="(item, index) in menuItems" :key="item.id" clickable v-ripple :to="item.path"
           :class="{ 'active-mobile': route.path === `/${item.path}` }" :style="index === 0 ? 'margin-top: 130px;' : ''"
@@ -195,43 +196,30 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
 .q-drawer {
   width: 100% !important;
   max-width: 100% !important;
+  background: transparent !important;
+  box-shadow: none !important;
 
   &__backdrop {
-    background: rgba(0, 0, 0, 0.85) !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(5px);
   }
 
-  &__content {
-    background: transparent !important;
-    box-shadow: none !important;
-    width: 100% !important;
+  .mobile-drawer-content {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
   }
 }
-
-.drawer-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.85);
-  z-index: 2000;
-}
-
-.mobile-drawer-content {
-  height: 100%;
-  background: black;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
 
 .mobile-menu-item {
   font-family: Inter;
   font-size: 17.161px;
-  color: white;
+  color: $white;
   margin-bottom: 10px;
   border-radius: 22.771px;
   width: 178px;
@@ -239,10 +227,12 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
 
   &.active-mobile {
     border: 1.518px solid rgba(0, 194, 255, 0.30);
-    background: #B20CFF;
+    background: $secondary;
     color: black !important;
 
     .q-item__section {
@@ -253,7 +243,7 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
 
   &:hover {
     color: black;
-    background: #B20CFF;
+    background: $secondary;
   }
 }
 
@@ -275,7 +265,7 @@ const direitosText = ref('Todos os direitos reservados por Conceito Digital')
     a.active-route {
       border-radius: 22.771px;
       border: 1.518px solid rgba(0, 194, 255, 0.30);
-      background: #B20CFF;
+      background: $secondary;
       color: black !important;
       font-weight: 600 !important;
       height: 31px;
